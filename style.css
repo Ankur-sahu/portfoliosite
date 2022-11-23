@@ -34,6 +34,9 @@ header ul{
     justify-content: center;
     align-items: center;
 }
+header .btn-menu{
+    display: none;
+}
 header ul li{
     list-style-type: none;
     margin-left: 20px;
@@ -84,14 +87,6 @@ span{
    
     mix-blend-mode: screen; /*for moon shadow*/
 }
-#text{
-    position: absolute;
-    right: 20px;
-    bottom: 200px;
-    width: 37%;
-    height: 200px;
-    z-index: 9;
-}
 #developer{
     width: 100%;
     height: 200px;
@@ -102,7 +97,7 @@ span{
     left: 30%;
     width: 40%;
     height: 350px;
-    color: #eee23f;
+    color: #fff;
     text-align: center;
     font-size: x-large;
 }
@@ -381,4 +376,57 @@ footer{
     font-size: medium;
     color: #fff;
     background: #262626;
+}
+@media (max-width:600px){
+    header{
+        padding: 10px;
+    }
+    header .logo{
+        color: #fff;       
+        font-size: 3em;
+        
+        
+    }
+    #info{
+        top: 260px;
+        left: 20px;
+        width: 90%;
+        font-size: 1em;
+    }
+
+    header .btn-menu{
+        display: block;
+        font-size: 50px;
+        color: #fff;
+    }
+    header ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 60vh;
+        padding-top: 50px;
+        display: block;
+    }
+    header ul li{
+        display: block;
+        width: 90%;
+        height: 80px;
+        margin: 20px;
+        text-align: center;
+        padding-top: 20px;
+    }
+    header ul li a{
+        width: 100%;
+        height: 50px;
+        padding: 20px 80px;
+        font-weight: 500;
+        font-size: xx-large;
+    }
+    header ul .btn-menu{
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
 }
