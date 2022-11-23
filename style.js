@@ -11,9 +11,8 @@ let developer = document.getElementById('developer');
 window.addEventListener('scroll',()=>{
     let value = window.scrollY;
     star.style.left = value * 0.25 + "px";
-    moon.style.top = value  + "px";
+    moon.style.top = value *1.3 + "px";
     mountains_behind.style.top = value *0.5 + "px";
-    info.style.top = 200 + value + "px";
-    text.style.bottom = 250 + -value + "px";
+    info.style.top = 240 + value + "px";
     btn.style.marginTop = value *1.5 + "px";
 }) 
