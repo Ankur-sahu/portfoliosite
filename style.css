@@ -25,6 +25,7 @@ header .logo{
     color: #fff;
     font-weight: 700;
     text-decoration: none;
+    
     font-size: 2em;
     
 }
@@ -47,7 +48,10 @@ header ul li a:hover, header ul li a.active{
     background: #fff;
     color: #2b1055;
 }
-section{
+span{
+    color: #ff004f;
+}
+#top-section{
     position: relative;
     width: 100%;
     height: 650px;
@@ -57,7 +61,7 @@ section{
     align-items: center;
     overflow: hidden;
 }
-section::before{ /* to make before section */
+#top-section::before{ /* to make before section */
     content: '';/*make somthing blur*/
     position: absolute;
     bottom: 0;
@@ -66,7 +70,7 @@ section::before{ /* to make before section */
     background: linear-gradient(to top,#1c0522, transparent/* to make trasparent*/);
     z-index: 1000;
 }
-section img{
+#top-section img{
     position: absolute;
     top: 0;
     left: 0;
@@ -76,13 +80,14 @@ section img{
     pointer-events: none;
 
 }
-section img#moon{
+#top-section img#moon{
+   
     mix-blend-mode: screen; /*for moon shadow*/
 }
 #text{
     position: absolute;
     right: 20px;
-    bottom: 250px;
+    bottom: 200px;
     width: 37%;
     height: 200px;
     z-index: 9;
@@ -93,15 +98,15 @@ section img#moon{
 }
 #info{
     position: absolute;
-    top: 200px;
-    left: 50px;
+    top: 240px;
+    left: 30%;
     width: 40%;
     height: 350px;
+    color: #eee23f;
+    text-align: center;
+    font-size: x-large;
 }
-#info span{
-    font-size: 3.5vw;
-    color: #FFB400;
-}
+
 
 #btn{
     text-decoration: none;
@@ -119,12 +124,261 @@ section img#moon{
     padding: 100px;
     background: #1c0522;  
 }
-.sec h2{
-    font-size: 3.5em;
-    margin-bottom: 10px;
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.personal-info{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.personal-info .user-pic{
+    width: 30%;
+    height: 400px;
+    padding: 10px;
+    color: #fff;
+    
+}
+.personal-info .user-pic img{
+    width: 100%;
+    height: 380px;
+    border-radius: 10px;
+    
+}
+.personal-info .about-me{
+    width: 70%;
+    height: 400px;
+    padding: 30px;
+    
+}
+#about h2{
+    font-size: 50px;
+    font-weight: 600;
     color: #fff;
 }
-.sec p{
-    font-size: 1em;
+.about-me p{
+
     color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.user-bio{
+    width: 50%;
+    height: auto;
+    border: 1px solid #fff;
+    text-align: center;
+}
+.tab-links{
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+}
+.user-bio ul li{
+    list-style: none;
+    margin: 10px 0px;
+    color: #fff;
+    font-size: 14px;
+}
+.user-bio ul li span{
+    font-size: 16px;
+    color: #b54769;
+}
+#portfolio{
+    width: 100%;
+    height: auto;
+    padding: 100px 200px;
+    background: #2b1055;
+}
+.container{
+    width: 95%;
+    height: 500px;
+    text-align: center;
+}
+.container h2{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+.work-container{
+    width: 100%;
+    height: 450px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.grid-work{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+}
+.image-work{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.image-work img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.work-first{
+    width: 40%;
+    height: 200px;
+}
+.work-second{
+    width: 60%;
+    height: 200px;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    color: #fff;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+.layer a{
+    margin-top: 15px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+}
+.image-work:hover img{
+    transform: scale(1.1);
+}
+.image-work:hover .layer{
+    height: 100%;
+}
+.btn-see-more{
+    width: 200px;
+    height: 100px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #ff004f;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn-see-more:hover{
+    background: #ff004f;
+}
+#contact{
+    background: #1c0522;
+    width: 100%;
+    height: auto;
+    padding: 100px;
+}
+.contact-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.left{
+    width: 50%;
+    height: 400px;
+}
+.left h2{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+.left p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.left p i{
+    margin-right: 5px;
+}
+.social-icons{
+    margin-top: 20px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin:30px 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn2{
+    width: 200px;
+    height: 100px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    background: #ff004f;
+}
+.right{
+    width: 50%;
+    height: 400px;
+}
+.right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.btn3{
+    height: 50px;
+    border: 0;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 20px;
+    font-size: medium;
+    color: #fff;
+    background: #262626;
 }
