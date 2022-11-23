@@ -14,5 +14,6 @@ window.addEventListener('scroll',()=>{
     moon.style.top = value *1.3 + "px";
     mountains_behind.style.top = value *0.5 + "px";
     info.style.top = 240 + value + "px";
+    //text.style.bottom = 200 + -value + "px";
     btn.style.marginTop = value *1.5 + "px";
 }) 
